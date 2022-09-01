@@ -1,13 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Formulários</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- 
+    <input type="password">
+    - Coloca uma senha de forma segura
+    - Esconde o que está sendo digitado no campo 
+    - O estilo da apresentação do campo, depende do User Agent -->
+
+    <form action="">
+      <input type="password" minlength="4" maxlength="8" size="8" />
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+
+    <!-- 
+    - Pattern: expressão regular para validar o que está sendo digitado no campo
+    - Altamente recomendado o uso de um padrão de segurança alta de senhas -->
+
+    <form action="">
+      <input
+        type="password"
+        pattern="[0-9a-fA-F]{4,8}"
+        title="Coloque HEX no mínimo 4 caracteres e no máximo 8 caracteres"
+        placeholder="Coloque a sua senha"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+
+    <form action="">
+      <input type="password" autocomplete="new-password" />
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+
+    <!--     
+    <input type="email"/>
+    - Espera que o usuário digite um e-mail
+    - Irá validar se o valor digitado é um e-mail  
     
-</body>
+    - multiple: o campo irá receber 1 ou mais e-mails, separado pro vírgulas
+    -->
+
+    <form action="">
+      <datalist id="emailslist">
+        <option>aline@rocketseat.com.br</option>
+        <option>mayk@rocketseat.com.br</option>
+      </datalist>
+      <input type="email" placeholder="Email" required list="emailslist" />
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+
+    <!-- 
+    <input type="url">
+    - Espera que o usuário digite uma url
+    - Irá validar se o valor digitado é uma url 
+
+    - spellcheck: habilita a verificação ortográfica para este input
+    -->
+
+    <form action="">
+      <input
+        type="url"
+        placeholder="https://example.com.br"
+        pattern=".*\.com\.br.*"
+        title="Somente domínios .com.br serão aceitos."
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+
+    <!-- 
+    <input type="file">
+    - Usuário poderá escolher 1 ou mais arquivos para enviar no formulário 
+
+    - accept: descreve que tipos de arquivos serão aceitos
+    Ex: .doc, .docx, .pdf, audio/*, image/png, .png
+
+    - Envio dos arquivos: o formulário deverá utilizar o método POST e o 
+    atributo enctype como "multipart/form-data"
+-->
+
+    <form action="" method="post" enctype="multipart/form-data">
+      <input type="file" multiple />
+    </form>
+    <br />
+
+    <!-- Color -->
+    <datalist id="colorsdata">
+      <option><div id="0000ff"></div></option>
+    </datalist>
+    <input type="color" list="colorsdata" />
+    <br />
+    <br />
+    <br />
+
+    <!-- 
+        <input type="checkbox">
+    - Caixas podem ser marcadas
+    - Selecionar um valor para ser enviado
+    - Se não selecionado, não será enviado nenhum digitado -->
+
+    <label for="subscribe"> Receber notificações </label>
+    <input type="checkbox" name="subscribe" id="subscribe" checked />
+    <br />
+    <br />
+    <br />
+
+    <!-- Marcar múltiplos valores -->
+    <fieldset>
+      <legend>Choose your interest</legend>
+      <div>
+        <input
+          type="checkbox"
+          name="interest"
+          id="coding"
+          value="coding"
+          checked
+        />
+        <label for="coding">Coding</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="interest"
+          id="music"
+          value="music"
+          checked
+        />
+        <label for="music">Music</label>
+      </div>
+    </fieldset>
+    <br />
+
+    <!-- Hidden
+    - Invisível ao usuário
+    - Será enviado com o Formulário
+    - Não receberá foco
+    - Leitores de tela não percebem esse campo -->
+
+    <input type="hidden" id="timestamp" name="timestamp" value="123456" />
+
+    <!-- Radio
+    Projetado para selecionar uma única opção de um grupo de opções -->
+
+    <fieldset>
+      <legend>Bora tomar um café?</legend>
+
+      <label for="yep">Sim</label>
+      <input type="radio" id="yep" name="coffee" value="yes" />
+
+      <label for="nono">Não</label>
+      <input type="radio" id="nono" name="coffee" value="no" />
+    </fieldset>
+    <br />
+    <br />
+
+    <!-- Textarea
+    - Mais de uma linha
+    - Útil para textos grandes -->
+
+    <label for="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Digite sua mensagem"
+    ></textarea>
+    <br />
+    <br />
+    <br />
+
+    <!-- Select 
+    - Controle que oferece um menu de opções -->
+
+    <label for="carselect">Qual o modelo do carro?</label>
+    <select name="carmodel" id="carselect" multiple>
+      <option value="fiat">Uno</option>
+      <option value="audi">A3</option>
+      <option value="bmw">X6</option>
+    </select>
+    <br />
+    <br />
+    <br />
+
+    <!-- Optgroup  -->
+    <label
+      >Please choose one or more pets:
+      <select name="pets">
+        <optgroup label="4-legged pets">
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+        </optgroup>
+        <optgroup label="Flying pets">
+          <option value="parrot">Parrot</option>
+          <option value="macaw">Macaw</option>
+          <option value="albatross">Albatross</option>
+        </optgroup>
+      </select>
+    </label>
+    <br />
+    <br />
+    <br />
+
+    <!-- Search
+    - Para campos de busca
+    - É igual ao campo do tipo 'text', mas poderá ser um pouco diferente
+    dependendo do user agent -->
+
+    <datalist id="searchterms">
+      <option value="mac">Mac</option>
+      <option value="win">Win</option>
+      <option value="linux">Linux</option>
+    </datalist>
+    <form action="">
+      <input
+        type="search"
+        name="q"
+        id="searchterms"
+        placeholder="Digite seu termo de busca"
+        size="25"
+        aria-label="Campo de Pesquisa: Digite seu termo de busca"
+      />
+      <button>Search</button>
+    </form>
+    <br>
+    <br>
+
+
+    <!-- Number
+    - entrada de números 
+    - step(pula os números, ex: de 10 em 10)-->
+
+    <form action="">
+        <input type="number"
+        placeholder="Selecione o número">
+        <button>Enviar</button>
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <!-- Range
+    - Controle para selecionar um valor numérico
+    - Slider ou dial control  -->
+
+    <input type="range" min="1" max="100" value="80">
+    <br>
+    <br>
+    <br>
+    
+    <!-- Data -->
+    <form action="">
+        <input type="date">
+        <button>Enviar</button>
+    </form>
+    
+
+  </body>
 </html>
