@@ -90,5 +90,17 @@ var a = 1
 
 */
 
-console.log(a); // undefined
+console.log(a); 
 var a = 1;
+
+
+/* Resposta
+
+Variável 'a' vai sofrer um hoisting
+
+var a // undefined
+console.log(a)
+a = 1
+
+
+*/
