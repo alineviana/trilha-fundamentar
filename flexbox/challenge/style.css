@@ -3,6 +3,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+body {
+    min-height: 100vh;
+}
+
 header {
     padding: 4rem;
     background-color: lightgray;
@@ -54,5 +58,33 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: .8rem;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+
+    line-height: 0;
+
+    gap: .4rem;
+}
+
+button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+footer {
+    margin-top: auto;
+
+    background-color: aquamarine;
+    color: white;
+
+    height: 8rem;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
