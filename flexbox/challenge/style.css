@@ -26,3 +26,33 @@ ul li:last-child {
     color: white;
     padding: .8rem;
 }
+
+.container {
+    display: flex;
+    gap: 1rem;
+}
+
+aside, main {
+    border: 1px solid;
+    height: 95vh;
+}
+
+aside {
+    flex-basis: 25%;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}
