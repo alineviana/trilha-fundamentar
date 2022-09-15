@@ -30,3 +30,25 @@ elements.value = "Valor que eu quiser"
 
 const header = document.querySelector('header')
 header.setAttribute('id', 'header')
+
+const headerID = document.querySelector('#header')
+
+console.log(headerID.getAttribute('class')) // pegar atributo
+
+header.removeAttribute('id')
+
+header.setAttribute('class', 'bg header') // add class
+
+
+// Alterando estilos
+
+const elementos = document.querySelector('body')
+
+elementos.style.backgroundColor = "#f9f3D2"
+console.log(elementos.style.backgroundColor)
+
+// class list
+element.classList.add('active', 'green')
+console.log(element.classList)
+element.classList.remove('active')
+element.classList.toggle('active')
