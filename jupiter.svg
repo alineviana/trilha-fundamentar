@@ -1,4 +1,3 @@
-# Discover | Rocketseat
 <svg width="101" height="76" viewBox="0 0 101 76" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M67.0103 67.7058C59.5908 71.824 50.9057 73.0233 42.651 71.0695C34.3963 69.1158 27.1648 64.1493 22.3687 57.1399C17.5726 50.1305 15.5562 41.5816 16.7134 33.1625C17.8706 24.7435 22.1182 17.0589 28.6267 11.6094C29.2157 11.1335 29.8237 10.6338 30.4554 10.1817C34.3635 7.33809 38.8297 5.35865 43.5586 4.37439C48.2875 3.39013 53.1711 3.42351 57.8862 4.4723C62.6012 5.52109 67.0401 7.56138 70.9091 10.4581C74.7781 13.3548 77.9889 17.0419 80.3289 21.2753C82.5982 25.376 83.9981 29.902 84.4411 34.5698C84.8841 39.2377 84.3606 43.9469 82.9033 48.4026C82.6658 49.1419 82.4014 49.8684 82.1101 50.5823C79.7317 56.5283 75.7197 61.6769 70.5394 65.431C69.412 66.2629 68.2333 67.0227 67.0103 67.7058V67.7058Z" fill="url(#paint0_linear_2725_41363)"/>
 <g opacity="0.8">
@@ -36,25 +35,3 @@
 </linearGradient>
 </defs>
 </svg>
-<br><br>
-
-> ## 🖥️ Trilha Fundamentar 
-
-* Trilha para aprender os fundamentos da programação Web <br><br>
-
-> ## 📋 Conteúdo
-
-* Front-end com foco em HTML, CSS, JavaScript e DOM
-* Back-end com JavaScript, Node.JS e SQL
-* Estrutura e gerenciamento de dados
-* Programação orientada a objetos
-* Terminal e HTTP 
-<br><br>
-
-> ## 💻 Tecnologias
- - HTML
- - CSS 
- - Git e Github
- - Node.JS
- - Express
- - SQL
