@@ -1,4 +1,4 @@
-# Discover | Rocketseat 
+# Discover | Rocketseat
 
 > ## 🖥️ Trilha Fundamentar 
 
