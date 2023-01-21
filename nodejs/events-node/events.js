@@ -6,7 +6,7 @@ Event Module
 - Disparar eventos
 - Ouvir eventos
 - Fazer alguma ação quando ouvir o evento
-- É a base para mutos outros módulos como: http, stream, file system...
+- É a base para muitos outros módulos como: http, stream, file system...
 
 */
 
